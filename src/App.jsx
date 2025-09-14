@@ -5,7 +5,7 @@
 
 import React, { useEffect } from 'react';
 import './styles/main.css';
-import useGlobalLinks from '../../shared/useGlobalLinks';
+import { useGlobalLinks } from './hooks/useGlobalLinks';
 
 function App() {
   const { links, loading, error } = useGlobalLinks();
