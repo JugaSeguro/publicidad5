@@ -5,10 +5,10 @@
 
 import React, { useEffect } from 'react';
 import './styles/main.css';
-import { useGlobalLinks } from './hooks/useGlobalLinks';
+import { useLandingPhone } from './hooks/useLandingPhone';
 
 function App() {
-  const { links, loading, error } = useGlobalLinks();
+  const { phoneData, loading, error } = useLandingPhone();
 
   // Efectos al cargar el componente
   useEffect(() => {
@@ -68,7 +68,7 @@ function App() {
         </div>
         
         <div className="bonus-title">
-          <h1>{links.register_title}</h1>
+          <h1>{phoneData.title}</h1>
         </div>
         
         <div className="promo-text">
@@ -79,7 +79,7 @@ function App() {
           <button id="bonus-button" className="bonus-highlight bonus-button" onClick={() => window.open('https://1xclub.bet', '_blank')}>
             🔥 ¡OBTENÉ TU <span className="bonus-amount">MEGABONUS</span> CON TU PRIMER RECARGA 🔥
           </button>
-          <p className="telegram-promo" onClick={() => window.open(links.whatsapp_link, '_blank')}>
+          <p className="telegram-promo" onClick={() => window.open(phoneData.whatsapp_link, '_blank')}>
             💬 CONTACTANOS POR WHATSAPP Y GANÁ PREMIOS DIARIOS 💬
           </p>
         </div>
@@ -89,7 +89,7 @@ function App() {
           <button id="access-button" className="chat-button access-button" onClick={() => window.open('https://1xclub.bet', '_blank')}>
             🎯 ACCEDER A 1XCLUB.BET 🎯
           </button>
-          <button id="chat-button" className="chat-button" onClick={() => window.open(links.whatsapp_link, '_blank')}>
+          <button id="chat-button" className="chat-button" onClick={() => window.open(phoneData.whatsapp_link, '_blank')}>
             <i className="chat-icon"></i>
             <span>Chatear con nosotros</span>
           </button>
