@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "cp -r ../shared ./shared && npm run build"
   publish = "dist"
 
 # Reglas de redireccionamiento para SPA

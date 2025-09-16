@@ -5,10 +5,10 @@
 
 import React, { useEffect } from 'react';
 import './styles/main.css';
-import { useLandingPhone } from './hooks/useLandingPhone';
+import { useLandingPhone } from '@shared/useLandingPhone';
 
 function App() {
-  const { phoneData, loading, error } = useLandingPhone();
+  const { phoneData, loading, error } = useLandingPhone(1);
 
   // Efectos al cargar el componente
   useEffect(() => {
