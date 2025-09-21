@@ -49,7 +49,7 @@ const checkPixelStatus = () => {
 };
 
 function App() {
-  const { phoneData, loading } = useLandingPhone(1);
+  const { phoneData, loading } = useLandingPhone(5);
   const [showPopup, setShowPopup] = useState(false);
 
   // Efectos al cargar el componente
